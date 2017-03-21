@@ -14,3 +14,5 @@
     then making build.gradle similar to above structure, including dependencies as local units in the final build jar makes an uber jar.
 5. ref url: http://stackoverflow.com/questions/20574111/add-maven-repository-to-build-gradle
     then adding maven(){url: ...} block in repositories defines a maven repo.
+6. ref url: http://stackoverflow.com/questions/2566685/is-there-a-way-to-split-factor-out-common-parts-of-gradle-build
+    then adding myTasks.gradle file with hello task, applying that gradle file in build.gradle gives us hello task in runTime.

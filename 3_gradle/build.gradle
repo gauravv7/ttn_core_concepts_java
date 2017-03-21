@@ -10,6 +10,7 @@
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'application'
+apply from: 'myTasks.gradle'
 version = '1.0'
 mainClassName='App'
 // Apply the application plugin to add support for building an application
