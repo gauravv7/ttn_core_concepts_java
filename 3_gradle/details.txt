@@ -12,3 +12,5 @@
     adding file.xml in resource > include & srcDirs to scan src/main/resouces directory in property: sourceSets > main, applies the required changes.
 4. ref url: https://github.com/bond-/gradle-groovy-jar-example/blob/master/build.gradle
     then making build.gradle similar to above structure, including dependencies as local units in the final build jar makes an uber jar.
+5. ref url: http://stackoverflow.com/questions/20574111/add-maven-repository-to-build-gradle
+    then adding maven(){url: ...} block in repositories defines a maven repo.
