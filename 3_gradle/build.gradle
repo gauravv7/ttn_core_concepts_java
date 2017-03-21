@@ -49,5 +49,9 @@ sourceSets {
         java {
             srcDirs += ['src/main/java2']
         }
+        resources {
+            srcDirs = ['src/main/resources']
+            include "file1.xml"
+        }
     }
 }

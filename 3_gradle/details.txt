@@ -8,4 +8,5 @@
     Hello world.
     gaurav@gaurav-arora:~/ttn_core_concepts_java/3_gradle$ java -cp build/libs/3_gradle AppOther
     Hello world.
-
+3. ref url: https://docs.gradle.org/current/dsl/org.gradle.api.tasks.SourceSet.html
+    adding file.xml in resource > include & srcDirs to scan src/main/resouces directory in property: sourceSets > main, applies the required changes.
