@@ -10,7 +10,7 @@
 apply plugin: 'java'
 
 // Apply the application plugin to add support for building an application
-apply plugin: 'application'
+//apply plugin: 'application'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -21,12 +21,19 @@ repositories {
 
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
-    compile 'com.google.guava:guava:20.0'
+//    compile 'com.google.guava:guava:20.0'
 
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
 }
 
 // Define the main class for the application
-mainClassName = 'App'
-
+//mainClassName = 'App'
+jar {
+    manifest {
+        attributes(
+                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                'Main-Class': 'App'
+        )
+    }
+}

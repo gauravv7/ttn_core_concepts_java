@@ -1,0 +1,2 @@
+1. ref url: https://docs.gradle.org/current/userguide/tutorial_java_projects.html#sec:customizing_the_project
+    then simply adding the Main-class in attributed to manifest as specified in the above link.
