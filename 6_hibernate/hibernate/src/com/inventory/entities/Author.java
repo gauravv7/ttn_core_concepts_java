@@ -1,10 +1,17 @@
 package com.inventory.entities;
 
 public class Author {
+	private int id;
 	private String firstName;
 	private String lastName;
 	private int age;
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getFirstName() {
 		return firstName;
 	}
@@ -22,6 +29,10 @@ public class Author {
 	}
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+	@Override
+	public String toString() {
+		return "Author [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + "]";
 	}
 	
 	
