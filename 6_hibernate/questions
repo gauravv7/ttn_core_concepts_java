@@ -1,0 +1,17 @@
+1  Create a class Author with instance variables firstName, lastName and age.
+2  Perform CRUD operation for Author class.
+3  Use hbm2ddl create to introduce Date of Birth for Author.
+4  Use hbm2dll update to insert at least 4 records for Author.
+5  Perform hbm2dll create-drop by closing session factory.
+6  Rename all the fields using column annotation.
+7  Mark lastName as @Transient.
+8  Use @Temporal for date of birth of Author.
+9  Generate Id for Author Using IDENTITY and TABLE starategy.
+10  Create a class Address for Author with instance variables streetNumber, location, State.
+11  Create instance variable of Address class inside Author class and save it as embedded object.
+12  Introduce a List of subjects for author.
+13  Persist 3 subjects for each author.
+14  Create an Entity book with an instance variable bookName.
+15  Implement One to One mapping between Author and Book.
+16  Implement One to Many Mapping between Author and Book(Unidirectional, BiDirectional and without additional table ) and  implement cascade save.
+17  Implement Many to Many Mapping between Author and Book.
