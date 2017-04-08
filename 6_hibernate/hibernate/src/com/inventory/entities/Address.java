@@ -1,5 +1,8 @@
 package com.inventory.entities;
 
+import javax.persistence.Embeddable;
+
+@Embeddable
 public class Address {
 	
 	private String streetNumber; 
