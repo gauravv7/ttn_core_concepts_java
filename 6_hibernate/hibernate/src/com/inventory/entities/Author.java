@@ -3,13 +3,16 @@ package com.inventory.entities;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -42,6 +45,8 @@ public class Author {
 	@ElementCollection
 	private List<Subject> subjects;
 	
+	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private Book book;
 	
 	public int getId() {
 		return id;
@@ -84,6 +89,12 @@ public class Author {
 	}
 	public void setSubjects(List<Subject> subjects) {
 		this.subjects = subjects;
+	}
+	public Book getBook() {
+		return book;
+	}
+	public void setBook(Book book) {
+		this.book = book;
 	}
 	@Override
 	public String toString() {

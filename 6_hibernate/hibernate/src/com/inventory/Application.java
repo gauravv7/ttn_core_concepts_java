@@ -2,14 +2,12 @@ package com.inventory;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
 
 import org.hibernate.Session;
 
 import com.inventory.entities.Author;
+import com.inventory.entities.Book;
 import com.inventory.entities.Subject;
 
 public class Application {
@@ -26,15 +24,18 @@ public class Application {
 		author1.setLastName("xyz");
 		author1.setAge(20);
 		author1.setDob(new SimpleDateFormat("dd/mm/yyyy").parse("04/03/1992"));
-		session.save(author1);
-		author1.setAge(author1.getAge()+1);
-		
 		ArrayList<Subject> arr = new ArrayList<>();
 		arr.add(new Subject("a"));
 		arr.add(new Subject("b"));
 		arr.add(new Subject("c"));
 		
 		author1.setSubjects(arr);
+		Book book = new Book("b1", author1);
+		
+		author1.setBook(book);
+		session.save(author1);
+		
+
 		
 /*		Author author2 = new Author();
 		
