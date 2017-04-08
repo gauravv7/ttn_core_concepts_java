@@ -1,13 +1,16 @@
 package com.inventory.entities;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -21,14 +24,14 @@ public class Book {
 	@Column(name="book_name")
 	private String bookName;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	private Author author;
+	@ManyToMany(cascade=CascadeType.ALL)  
+	private List<Author> authors;
 
 	public Book() {	}
 
-	public Book(String bookName, Author author) {
+	public Book(String bookName, List<Author> authors) {
 		this.bookName = bookName;
-		this.author = author;
+		this.authors = authors;
 	}
 
 	public String getBookName() {
@@ -39,12 +42,12 @@ public class Book {
 		this.bookName = bookName;
 	}
 	
-	public Author getAuthor() {
-		return author;
+	public List<Author> getAuthor() {
+		return authors;
 	}
 
-	public void setAuthor(Author author) {
-		this.author = author;
+	public void setAuthor(List<Author> author) {
+		this.authors = authors;
 	}
 	
 

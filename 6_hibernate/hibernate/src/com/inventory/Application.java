@@ -29,16 +29,30 @@ public class Application {
 		arr.add(new Subject("b"));
 		arr.add(new Subject("c"));
 		
+		Author author2 = new Author();
+		
+		author2.setFirstName("def");
+		author2.setLastName("xyz");
+		author2.setAge(20);
+		author2.setDob(new SimpleDateFormat("dd/mm/yyyy").parse("05/03/1992"));
+		session.save(author2);
+		author2.setAge(author2.getAge()+2);
+		
 		author1.setSubjects(arr);
 		ArrayList<Book> book = new ArrayList<>();
-		book.add(new Book("b1", author1));
-		book.add(new Book("b2", author1));
+		ArrayList<Author> authors = new ArrayList<>();
+		authors.add(author1);
+		authors.add(author2);
+		
+		book.add(new Book("b1", authors));
+		book.add(new Book("b2", authors));
 		author1.setBook(book);
+		author2.setBook(book);
+		
 		session.save(author1);
+		session.save(author2);
 		
-
-		
-/*		Author author2 = new Author();
+/*		
 		
 		author2.setFirstName("def");
 		author2.setLastName("xyz");
