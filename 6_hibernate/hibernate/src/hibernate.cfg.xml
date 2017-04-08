@@ -9,7 +9,7 @@
   <property name="hibernate.default_schema">hiber_publication</property>
   <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
   <property name="hibernate.show_sql">true</property>
-  <property name="hibernate.hbm2ddl.auto">create</property>
+  <property name="hibernate.hbm2ddl.auto">update</property>
   <mapping resource="com/inventory/entities/Author.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>
