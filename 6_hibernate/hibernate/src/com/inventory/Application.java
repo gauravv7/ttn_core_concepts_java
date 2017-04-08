@@ -3,10 +3,14 @@ package com.inventory;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 
 import org.hibernate.Session;
 
 import com.inventory.entities.Author;
+import com.inventory.entities.Subject;
 
 public class Application {
 	public static void main(String[] args) throws ParseException {
@@ -25,7 +29,14 @@ public class Application {
 		session.save(author1);
 		author1.setAge(author1.getAge()+1);
 		
-		Author author2 = new Author();
+		ArrayList<Subject> arr = new ArrayList<>();
+		arr.add(new Subject("a"));
+		arr.add(new Subject("b"));
+		arr.add(new Subject("c"));
+		
+		author1.setSubjects(arr);
+		
+/*		Author author2 = new Author();
 		
 		author2.setFirstName("def");
 		author2.setLastName("xyz");
@@ -50,7 +61,7 @@ public class Application {
 		author4.setAge(20);
 		author4.setDob(new SimpleDateFormat("dd/mm/yyyy").parse("07/03/1992"));
 		session.save(author4);
-		author4.setAge(author4.getAge()+4);
+		author4.setAge(author4.getAge()+4);*/
 
 		session.getTransaction().commit();
 		
