@@ -1,10 +1,13 @@
 package com.inventory.entities;
 
+import java.util.Date;
+
 public class Author {
 	private int id;
 	private String firstName;
 	private String lastName;
 	private int age;
+	private Date dob;
 	
 	public int getId() {
 		return id;
@@ -30,10 +33,18 @@ public class Author {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+	public Date getDob() {
+		return dob;
+	}
+	public void setDob(Date date) {
+		this.dob = date;
+	}
 	@Override
 	public String toString() {
-		return "Author [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + "]";
+		return "Author [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + ", dob="
+				+ dob + "]";
 	}
+	
 	
 	
 }
