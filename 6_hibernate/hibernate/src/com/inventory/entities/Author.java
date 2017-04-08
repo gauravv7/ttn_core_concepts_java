@@ -12,7 +12,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -45,8 +46,9 @@ public class Author {
 	@ElementCollection
 	private List<Subject> subjects;
 	
-	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	private Book book;
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinColumn(name="author_id")
+	private List<Book> book;
 	
 	public int getId() {
 		return id;
@@ -90,10 +92,10 @@ public class Author {
 	public void setSubjects(List<Subject> subjects) {
 		this.subjects = subjects;
 	}
-	public Book getBook() {
+	public List<Book> getBook() {
 		return book;
 	}
-	public void setBook(Book book) {
+	public void setBook(List<Book> book) {
 		this.book = book;
 	}
 	@Override

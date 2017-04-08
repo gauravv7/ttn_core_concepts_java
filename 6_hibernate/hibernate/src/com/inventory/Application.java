@@ -30,8 +30,9 @@ public class Application {
 		arr.add(new Subject("c"));
 		
 		author1.setSubjects(arr);
-		Book book = new Book("b1", author1);
-		
+		ArrayList<Book> book = new ArrayList<>();
+		book.add(new Book("b1", author1));
+		book.add(new Book("b2", author1));
 		author1.setBook(book);
 		session.save(author1);
 		
