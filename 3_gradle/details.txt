@@ -1,0 +1,18 @@
+1. ref url: https://docs.gradle.org/current/userguide/tutorial_java_projects.html#sec:customizing_the_project
+    then simply adding the Main-class in attributed to manifest as specified in the above link.
+2. ref url: https://docs.gradle.org/current/dsl/org.gradle.api.tasks.SourceSet.html
+    then adding java2 path to sourceSets in idea/modules places its entry in moduels .idea/modules/$project_main.iml file. It is marked as source root directory for idea.
+    to add this source set in jar file, we define its entry in srcDirs property in sourceSet/main/java block. Building jar with this configuration it adds both the class files in the jar.
+    output:
+    gaurav@gaurav-arora:~/ttn_core_concepts_java/3_gradle$ java -cp build/libs/3_gradle App
+    Hello world.
+    gaurav@gaurav-arora:~/ttn_core_concepts_java/3_gradle$ java -cp build/libs/3_gradle AppOther
+    Hello world.
+3. ref url: https://docs.gradle.org/current/dsl/org.gradle.api.tasks.SourceSet.html
+    adding file.xml in resource > include & srcDirs to scan src/main/resouces directory in property: sourceSets > main, applies the required changes.
+4. ref url: https://github.com/bond-/gradle-groovy-jar-example/blob/master/build.gradle
+    then making build.gradle similar to above structure, including dependencies as local units in the final build jar makes an uber jar.
+5. ref url: http://stackoverflow.com/questions/20574111/add-maven-repository-to-build-gradle
+    then adding maven(){url: ...} block in repositories defines a maven repo.
+6. ref url: http://stackoverflow.com/questions/2566685/is-there-a-way-to-split-factor-out-common-parts-of-gradle-build
+    then adding myTasks.gradle file with hello task, applying that gradle file in build.gradle gives us hello task in runTime.
