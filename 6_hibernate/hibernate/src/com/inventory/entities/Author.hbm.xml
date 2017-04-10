@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Apr, 2017 4:47:23 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.inventory.entities.Author" table="author">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <property name="firstName" type="java.lang.String">
+            <column name="firstName" />
+        </property>
+        <property name="lastName" type="java.lang.String">
+            <column name="lastName" />
+        </property>
+        <property name="age" type="int">
+            <column name="age" />
+        </property>
+        <property name="dob" type="java.sql.Date">
+            <column name="dob" />
+        </property>
+    </class>
+</hibernate-mapping>
