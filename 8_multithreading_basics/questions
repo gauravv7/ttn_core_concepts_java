@@ -1,0 +1,48 @@
+1. Print Odd and even numbers from 1 to 20 in ascending order using two threads;
+
+ 
+
+2. Print Prime and non-prime numbers from 1 to 20 in ascending order using two threads;
+
+ 
+
+3. Print pattern 1 2 3 1 2 3.... using three different threads
+
+ 
+
+4. Write a program called ReverseHello.java that creates a thread (let's call it Thread 1). Thread 1 creates another thread (Thread 2); Thread 2 creates Thread 3; and so on, up to Thread 10. Each thread should print "Hello from Thread <num>!", but you should structure your program such that the threads print their greetings in reverse order.
+
+ 
+
+5. Create a program that calculates the sum of all the elements of an Array by using 4 threads.
+
+ 
+
+6. Write a program called MaxValue.java that finds the maximum value in an array of ints using 4 threads.
+
+ 
+
+7. Implement a Pub-Sub model using following criteria:
+
+There is a queue (i.e list) with a certain capacity (say 10)
+M number of publisher and N number of subscriber sharing the queue.
+Publisher has to wait if queue capacity is full
+Subscriber will wait if queue is empty
+Use thread signaling (wait, notify / notifyAll)
+8. Solve problem 7 using BlockingQueue
+
+9.  A program consists of n thread printing 1 to 10. Below is the sample output of executing 4 concurrent threads.
+
+Thread 1: 1
+Thread 1: 5
+Thread 1: 9
+Thread 3: 3
+Thread 3: 7
+Thread 2: 2
+Thread 4: 4
+Thread 2: 6
+Thread 4: 8
+Thread 2: 10
+Identify the pattern and create a program to get the output for N concurrent threads.
+
+10. Write a program called SharedCounter.java in which 5 threads each increment a shared int counter 1000 times. When all the threads have finished, print the final value of the counter. If the initial value is zero, do you always get 5000? Arrange your code to get the correct output. Note: - use a thread pool of 2 threads.
