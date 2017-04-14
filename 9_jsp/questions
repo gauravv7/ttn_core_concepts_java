@@ -1,0 +1,9 @@
+1. Write a JSP to output the entire line, “Hello!  The time is now …” but use a scriptlet for the complete string, including the HTML tags.
+
+2. Accept the value of n and print numbers from 1 to n.
+
+3. Create a dynamic web application with following features:
+	a. Sign Up of user.
+	b. Sign In of user.
+	c. Welcome page if login successful.
+	d. Logout of user.
